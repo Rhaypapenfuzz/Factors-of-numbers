@@ -3,6 +3,7 @@
 using namespace std;
 
 void numFactors(int);
+void numFactors2(int);
 int main() 
 { 
     //Ask user for an integer input and then print respective factors of that number #include #include #include using namespace std;
@@ -11,10 +12,12 @@ int main()
   int userInteger; 
   cout << "I can help you find the factors of any integer.\nEnter a number: "; 
   cin >> userInteger; 
-  numFactors(userInteger);
+  numFactors2(userInteger);
 
   return 0;
 } 
+
+// void that displays factors. List used in void
 void numFactors(int userInteger) 
 { 
 list<int> factors;
@@ -26,4 +29,12 @@ for (int i = 1; i <= userInteger; i++)
       factors.push_back(i); 
 for (auto v : factors) 
     cout << v << "\n";
+}
+
+//Void that outputs factors. No list used
+void numFactors2(int userInteger) 
+{  
+for (int i = 1; i <= userInteger; i++)
+  if (userInteger % i==0) 
+    cout<<i<<" ";
 }
