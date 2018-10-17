@@ -10,14 +10,14 @@ int main()
 
   
   int userInteger; 
-  cout << "I can help you find the factors of any integer.\nEnter a number: "; 
-  cin >> userInteger; 
+  do{
+    cout << "I can help you find the factors of any positive integer.\nEnter a number: "; 
+  cin >> userInteger; }
+  while(userInteger<=0);
   numFactors2(userInteger);
 
   return 0;
 } 
-
-// void that displays factors. List used in void
 void numFactors(int userInteger) 
 { 
 list<int> factors;
@@ -31,7 +31,6 @@ for (auto v : factors)
     cout << v << "\n";
 }
 
-//Void that outputs factors. No list used
 void numFactors2(int userInteger) 
 {  
 for (int i = 1; i <= userInteger; i++)
