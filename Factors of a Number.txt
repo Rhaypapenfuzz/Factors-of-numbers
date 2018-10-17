@@ -1,0 +1,29 @@
+#include <iostream>
+#include <list>
+using namespace std;
+
+void numFactors(int);
+int main() 
+{ 
+    //Ask user for an integer input and then print respective factors of that number #include #include #include using namespace std;
+
+  
+  int userInteger; 
+  cout << "I can help you find the factors of any integer.\nEnter a number: "; 
+  cin >> userInteger; 
+  numFactors(userInteger);
+
+  return 0;
+} 
+void numFactors(int userInteger) 
+{ 
+list<int> factors;
+//int factors[]={};
+int factor; 
+
+for (int i = 1; i <= userInteger; i++)
+  if (userInteger % i==0) 
+      factors.push_back(i); 
+for (auto v : factors) 
+    cout << v << "\n";
+}
